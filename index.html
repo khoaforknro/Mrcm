@@ -117,11 +117,12 @@ audio.play().catch(()=>{});
 
 document.getElementById('card').addEventListener('click', function unmute(){
   audio.muted = false;
-  this.removeEventListener('click', unmute); // chỉ chạy lần đầu
+  this.removeEventListener('click', unmute); 
 });
 </script>
 </body>
 </html>
+
 
 
 
