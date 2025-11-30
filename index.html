@@ -61,11 +61,11 @@
 </div>
 
 <audio id="bg-music" loop preload="auto">
-  <source src="https://drive.usercontent.google.com/download?id=1CN0C-Yim0Her_dvGDRs9B58btL42LlNU&export=download&authuser=0" type="audio/mpeg">
+  <source src="hhttps://files.catbox.moe/9077tm.mp" type="audio/mpeg">
 </audio>
 
 <script>
-// Tuyết rơi – giữ nguyên 100%
+
 const c = document.getElementById('snow');
 const ctx = c.getContext('2d');
 function resizeCanvas(){
@@ -101,20 +101,20 @@ function snow(){
 }
 snow();
 
-// Lật thiệp
+
 document.getElementById('card').onclick = function(){
   this.classList.toggle('open');
 };
 
-// === CHỈ THÊM 8 DÒNG NÀY ĐỂ AUTO PHÁT NHẠC 2025 ===
+
 const audio = document.getElementById('bg-music');
 audio.volume = 0.5;
 
-// Bước 1: mute trước để autoplay được ngay khi load
+
 audio.muted = true;
 audio.play().catch(()=>{});
 
-// Bước 2: lần đầu click thiệp → bỏ mute (có tương tác → tiếng bật 100%)
+
 document.getElementById('card').addEventListener('click', function unmute(){
   audio.muted = false;
   this.removeEventListener('click', unmute); // chỉ chạy lần đầu
@@ -122,3 +122,4 @@ document.getElementById('card').addEventListener('click', function unmute(){
 </script>
 </body>
 </html>
+
