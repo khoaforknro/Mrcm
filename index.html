@@ -144,7 +144,7 @@
         <p>Chúc em Giáng sinh thật vui vẻ, ấm áp<br>và tràn đầy hạnh phúc.</p>
         <p>Chúc em luôn khỏe mạnh, thành công<br>và đạt được mọi điều mình mong muốn.</p>
         <p>Năm mới sắp tới rồi,<br>em nhớ giữ gìn sức khỏe thật tốt nhé!</p>
-        <div class="signature">From Khoa 🎅</div>
+        <div class="signature">From Đồng Nai Santa Claus 🎅</div>
       </div>
     </div>
   </div>
@@ -195,9 +195,22 @@ document.getElementById('card').onclick = function(){
   this.classList.toggle('open');
 };
 
-// chỉnh âm lượng nhạc
+
 const audio = document.getElementById("bg-music");
 audio.volume = 0.5;
+
+const audio = document.getElementById('bg-music');
+audio.muted = true;  
+audio.play();  
+
+
+document.getElementById('card').onclick = function(){
+  this.classList.toggle('open');
+  if(audio.muted){
+    audio.muted = false;  // Bỏ mute, tiếng bật lên
+  }
+};
 </script>
 </body>
 </html>
+
