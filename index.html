@@ -126,10 +126,15 @@ audio.play().catch(()=>{});
 
 card.onclick = function(){
   this.classList.toggle('open');
-  if(audio.muted){
-    audio.muted = false;
+
+  
+  if(this.classList.contains('open')){
+    audio.play();
+  } else {
+    audio.pause();
   }
 
+  
   if(!this.classList.contains('open')){
     document.querySelectorAll('.message p, .signature').forEach(el=>{
       el.style.animation = 'none';
@@ -139,9 +144,11 @@ card.onclick = function(){
   }
 };
 
+
 </script>
 </body>
 </html>
+
 
 
 
